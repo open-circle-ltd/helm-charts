@@ -1,0 +1,171 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ template "helm-app.fullname" . }}
+  labels:
+    app: {{ template "helm-app.name" . }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  strategy:
+    type: Recreate
+  replicas: {{ .Values.web.replicasCount }}
+  selector:
+    matchLabels:
+      app: {{ template "helm-app.name" . }}
+      release: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ template "helm-app.name" . }}
+        release: {{ .Release.Name }}
+      # AUTOMATICALLY ROLL DEPLOYMENTS WHEN CONFIGMAPS OR SECRETS CHANGE
+      # https://helm.sh/docs/howto/charts_tips_and_tricks/#automatically-roll-deployments
+      annotations:
+        checksum/config: {{ include (print $.Template.BasePath "/web-secret.yaml") . | sha256sum }}
+    spec:
+      {{- if .Values.web.nodeSelector }}
+      nodeSelector:
+        deployments: {{ .Values.web.nodeSelector }}
+      {{- end }}
+      imagePullSecrets:
+        - name: {{ .Values.web.image.pullSecret }}
+      initContainers:
+        # RAILS MIGRATIONS
+        - name: {{ .Chart.Name }}-db-migrations
+          image: "{{ .Values.web.image.repository }}:{{ template "helm-app.tag" . }}"
+          imagePullPolicy: {{ .Values.web.image.pullPolicy }}
+          envFrom:
+            - secretRef:
+                name: {{ template "helm-app.fullname" . }}
+          command: ["/bin/sh"]
+          args: ["-c", "bundle exec rails db:migrate"]
+      containers:
+      # RAILS WEB APP
+      - name: {{ .Chart.Name }}
+        image: "{{ .Values.web.image.repository }}:{{ template "helm-app.tag" . }}"
+        imagePullPolicy: {{ .Values.web.image.pullPolicy }}
+        envFrom:
+          - secretRef:
+              name: {{ template "helm-app.fullname" . }}
+        command: ["/bin/sh"]
+        args: ["-c", "cat tmp/pids/server.pid && rm -f tmp/pids/server.pid || true && bundle exec rails server -b 0.0.0.0 -p {{ .Values.web.service.internalPort }}"]
+
+        ### public/system mounted in WEB
+        {{- if .Values.mount_public_system_volume.enabled }}
+        volumeMounts:
+          # mount the ActiveRecord Upload Path
+          - name: public-system-data
+            mountPath: /myapp/public/system
+            readOnly: false
+        {{- end }}
+
+      {{- if .Values.probes }}
+      {{- if .Values.probes.liveness }}
+      {{- if .Values.probes.liveness.enabled }}
+        livenessProbe:
+        {{- if .Values.probes.liveness.httpGet }}
+          {{- if .Values.probes.liveness.httpGet.enabled }}
+          httpGet:
+            path: {{ .Values.probes.liveness.httpGet.path }}
+            port: {{ .Values.probes.liveness.httpGet.port }}
+          {{- end }}
+        {{- end }}
+        {{- if .Values.probes.liveness.tcpSocket }}
+          {{- if .Values.probes.liveness.tcpSocket.enabled }}
+          tcpSocket:
+            port: {{ .Values.probes.liveness.tcpSocket.port }}
+          {{- end }}
+        {{- end }}
+          initialDelaySeconds: {{ .Values.probes.liveness.initialDelaySeconds }}
+          timeoutSeconds: {{ .Values.probes.liveness.timeoutSeconds }}
+          periodSeconds: {{ .Values.probes.liveness.periodSeconds }}
+          failureThreshold: {{ .Values.probes.liveness.failureThreshold }}
+          successThreshold: {{ .Values.probes.liveness.successThreshold }}
+      {{- end }}
+      {{- end }}
+
+      {{- if .Values.probes.readiness }}
+      {{- if .Values.probes.readiness.enabled }}
+        readinessProbe:
+        {{- if .Values.probes.readiness.httpGet }}
+          {{- if .Values.probes.readiness.httpGet.enabled }}
+          httpGet:
+            path: {{ .Values.probes.readiness.httpGet.path }}
+            port: {{ .Values.probes.readiness.httpGet.port }}
+          {{- end }}
+        {{- end }}
+        {{- if .Values.probes.readiness.tcpSocket  }}
+          {{- if .Values.probes.readiness.tcpSocket.enabled  }}
+          tcpSocket:
+            port: {{ .Values.probes.readiness.tcpSocket.port }}
+          {{- end }}
+        {{- end }}
+          initialDelaySeconds: {{ .Values.probes.readiness.initialDelaySeconds }}
+          timeoutSeconds: {{ .Values.probes.readiness.timeoutSeconds }}
+          periodSeconds: {{ .Values.probes.readiness.periodSeconds }}
+          failureThreshold: {{ .Values.probes.readiness.failureThreshold }}
+          successThreshold: {{ .Values.probes.readiness.successThreshold }}
+      {{- end }}
+      {{- end }}
+
+      {{- if .Values.probes.startup }}
+      {{- if .Values.probes.startup.enabled }}
+        startupProbe:
+        {{- if .Values.probes.startup.httpGet }}
+          {{- if .Values.probes.startup.httpGet.enabled }}
+          httpGet:
+            path: {{ .Values.probes.startup.httpGet.path }}
+            port: {{ .Values.probes.startup.httpGet.port }}
+          {{- end }}
+        {{- end }}
+        {{- if .Values.probes.startup.tcpSocket  }}
+          {{- if .Values.probes.startup.tcpSocket.enabled  }}
+          tcpSocket:
+            port: {{ .Values.probes.startup.tcpSocket.port }}
+          {{- end }}
+        {{- end }}
+          initialDelaySeconds: {{ .Values.probes.startup.initialDelaySeconds }}
+          timeoutSeconds: {{ .Values.probes.startup.timeoutSeconds }}
+          periodSeconds: {{ .Values.probes.startup.periodSeconds }}
+          failureThreshold: {{ .Values.probes.startup.failureThreshold }}
+          successThreshold: {{ .Values.probes.startup.successThreshold }}
+      {{- end }}
+      {{- end }}
+      {{- end }}
+
+      # optional Sidekiq - currently only mailer and default worker
+      {{- if .Values.sidekiq.defaultWorker.enabled }}
+      - name: {{ .Chart.Name }}-default-worker
+        image: "{{ .Values.web.image.repository }}:{{ template "helm-app.tag" . }}"
+        imagePullPolicy: {{ .Values.web.image.pullPolicy }}
+        envFrom:
+          - secretRef:
+              name: {{ template "helm-app.fullname" . }}
+        command: ["/bin/sh"]
+        args: ["-c", "bundle exec sidekiq --concurrency 2 --queue default --queue mailer --timeout 5"]
+
+        ### public/system mounted in WORKER
+        {{- if .Values.mount_public_system_volume.enabled }}
+        volumeMounts:
+          # mount the ActiveRecord Upload Path
+          - name: public-system-data
+            mountPath: /myapp/public/system
+            readOnly: false
+        {{- end }}
+      {{- end }}
+
+      # VOLUMES
+      {{- if .Values.mount_public_system_volume.enabled }}
+      # App Volumes
+      volumes:
+        - name: public-system-data
+          {{- if .Values.persistence.enabled }}
+          persistentVolumeClaim:
+            claimName: {{ template "helm-app.fullname" . }}-public-system
+          {{- else }}
+          emptyDir: {}
+          {{- end }}
+      {{- end }}
+

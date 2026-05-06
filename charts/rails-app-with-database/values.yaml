@@ -1,0 +1,54 @@
+persistence:
+  enabled: false
+
+mount_public_system_volume:
+  enabled: false
+  size: 5G
+
+web:
+  replicasCount: 1
+  image:
+    # repository: SET-WHEN-USING
+    # tag: auto fall back to appVersion Value
+    pullPolicy: IfNotPresent
+    pullSecret: "set-to-pull-secret"
+  service:
+    type: ClusterIP
+    internalPort: 3000
+  metrics:
+    service:
+      type: ClusterIP
+      internalPort: 9393 # PUMA APP METRICS
+
+sidekiq:
+  defaultWorker:
+    enabled: false # simple worker only atm
+
+envConfig: {}
+#  envConfig:
+#    LOG_LEVEL: "info"
+#    RAILS_ENV: "production"
+#    SECRET_KEY_BASE: "change-me"
+#    SENTRY_DSN: "YOUR-DSN-URL"
+#    SENTRY_ENVIRONMENT: "production"
+#    SENTRY_RELEASE: "my-app@undefined"
+#    SENTRY_TRACES_SAMPLE_RATE: 1
+#    DATABASE_URL: "postgres://user:pass@host:5432/dbname"
+#    DOMAIN_NAME: "example.com"
+#    RAILS_SERVE_STATIC_FILES: "true"
+
+ingress:
+  enabled: false
+  annotations: {}
+  hosts: []
+  tls: []
+#  Example:
+#  enabled: true
+#  annotations:
+#    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+#  hosts:
+#    - "example.com"
+#  tls:
+#    - secretName: "example-com-tls-secret"
+#      hosts:
+#        - "example.com"

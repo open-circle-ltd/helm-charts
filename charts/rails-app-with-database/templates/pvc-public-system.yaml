@@ -1,0 +1,21 @@
+{{- if and .Values.mount_public_system_volume.enabled .Values.persistence.enabled }}
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ template "helm-app.fullname" . }}-public-system
+#  namespace: defined on deployment
+  labels:
+    app: {{ template "helm-app.name" . }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: {{ .Values.mount_public_system_volume.size }}
+  storageClassName: ssd
+  volumeMode: Filesystem
+{{- end }}
