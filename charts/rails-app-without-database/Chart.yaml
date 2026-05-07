@@ -2,5 +2,5 @@ apiVersion: v2
 name: rails-app-without-database
 description: A Helm chart for a generic Rails app without database
 type: application
-version: 0.2.0
+version: 0.2.1
 icon: https://raw.githubusercontent.com/rails/rails/master/guides/assets/images/favicon.ico
