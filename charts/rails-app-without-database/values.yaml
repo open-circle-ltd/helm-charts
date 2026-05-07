@@ -1,3 +1,6 @@
+nameOverride: ""
+fullnameOverride: ""
+
 web:
   replicasCount: 1
   image:
