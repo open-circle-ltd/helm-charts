@@ -2,6 +2,16 @@ apiVersion: v1
 entries:
   rails-app-with-database:
   - apiVersion: v2
+    created: "2026-05-07T07:30:48.15441551Z"
+    description: A Helm chart for a generic Rails app with DB migrations
+    digest: 00dfc068e0177627c74a22c9e1fb251ea62c9f6fdaf862bb3a32f5c574332a49
+    icon: https://raw.githubusercontent.com/rails/rails/master/guides/assets/images/favicon.ico
+    name: rails-app-with-database
+    type: application
+    urls:
+    - https://github.com/open-circle-ltd/helm-charts/releases/download/rails-app-with-database-0.2.0/rails-app-with-database-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
     created: "2026-05-06T15:41:14.32932556Z"
     description: A Helm chart for a generic Rails app with DB migrations
     digest: 7d4c7d3308f26f12bf52391f4e2771304c65feb94158d58e611c1a7611229bfe
@@ -13,6 +23,16 @@ entries:
     version: 0.1.1
   rails-app-without-database:
   - apiVersion: v2
+    created: "2026-05-07T07:30:48.353405033Z"
+    description: A Helm chart for a generic Rails app without database
+    digest: 2127feb355c76565acdf3ed89eb7ab5008305704e550a42c6c2e48102a594dde
+    icon: https://raw.githubusercontent.com/rails/rails/master/guides/assets/images/favicon.ico
+    name: rails-app-without-database
+    type: application
+    urls:
+    - https://github.com/open-circle-ltd/helm-charts/releases/download/rails-app-without-database-0.2.0/rails-app-without-database-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
     created: "2026-05-06T15:41:14.57920446Z"
     description: A Helm chart for a generic Rails app without database
     digest: 80b303c9210231139a9e48470f14caddcc8fc5a3a8ca53a93161d1cf40adfd5f
@@ -22,4 +42,4 @@ entries:
     urls:
     - https://github.com/open-circle-ltd/helm-charts/releases/download/rails-app-without-database-0.1.1/rails-app-without-database-0.1.1.tgz
     version: 0.1.1
-generated: "2026-05-06T15:41:14.579219568Z"
+generated: "2026-05-07T07:30:48.353414737Z"
