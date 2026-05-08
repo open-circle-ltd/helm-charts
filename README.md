@@ -8,6 +8,7 @@ Helm chart repository for OpenCircle, published via GitHub Pages.
 |-------|-------------|
 | [rails-app-with-database](charts/rails-app-with-database) | Generic Rails app with DB migrations and optional Sidekiq worker |
 | [rails-app-without-database](charts/rails-app-without-database) | Generic Rails app without database |
+| [retro-board](charts/retro-board) | Retro Board (based on rails-app-with-database) |
 
 ## Usage
 
