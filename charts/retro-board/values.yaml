@@ -1,0 +1,33 @@
+# Values are passed through to the base chart under the "app" key (alias).
+# See: charts/rails-app-with-database/values.yaml for all available options.
+
+app:
+  nameOverride: ""
+  fullnameOverride: ""
+
+  web:
+    replicasCount: 1
+    image:
+      # repository: SET-WHEN-USING
+      # tag: auto fall back to appVersion Value
+      pullPolicy: IfNotPresent
+      pullSecret: "set-to-pull-secret"
+    service:
+      type: ClusterIP
+      internalPort: 3000
+    metrics:
+      service:
+        type: ClusterIP
+        internalPort: 9393
+
+  sidekiq:
+    defaultWorker:
+      enabled: true
+
+  envConfig: {}
+
+  ingress:
+    enabled: false
+    annotations: {}
+    hosts: []
+    tls: []
