@@ -27,6 +27,7 @@ jobs:
       - name: Add dependency chart repos
         run: |
           helm repo add open-circle https://open-circle-ltd.github.io/helm-charts
+          helm repo add valkey https://valkey.io/valkey-helm/
           helm repo update
 
       - name: Run chart-releaser
