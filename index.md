@@ -11,6 +11,7 @@ helm repo update
 |-------|-------------|
 | rails-app-with-database | Generic Rails app with DB migrations |
 | rails-app-without-database | Generic Rails app without database |
+| retro-board | Retro Board (based on rails-app-with-database) |
 
 ### Install a chart
 
