@@ -2,7 +2,7 @@ apiVersion: v2
 name: retro-board
 description: OpenCircle Retro Board - Rails app with database
 type: application
-version: 0.3.0
+version: 0.3.1
 dependencies:
   - name: rails-app-with-database
     version: 0.2.1

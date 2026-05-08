@@ -24,12 +24,33 @@ retro-board:
       enabled: true
 
   envConfig: {}
+  #  envConfig:
+  #    LOG_LEVEL: "info"
+  #    RAILS_ENV: "production"
+  #    SECRET_KEY_BASE: "change-me"
+  #    SENTRY_DSN: "YOUR-DSN-URL"
+  #    SENTRY_ENVIRONMENT: "production"
+  #    SENTRY_RELEASE: "my-app@undefined"
+  #    SENTRY_TRACES_SAMPLE_RATE: 1
+  #    DATABASE_URL: "postgres://user:pass@host:5432/dbname"
+  #    DOMAIN_NAME: "example.com"
+  #    RAILS_SERVE_STATIC_FILES: "true"
 
   ingress:
     enabled: false
     annotations: {}
     hosts: []
     tls: []
+  #  Example:
+  #  enabled: true
+  #  annotations:
+  #    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+  #  hosts:
+  #    - "example.com"
+  #  tls:
+  #    - secretName: "example-com-tls-secret"
+  #      hosts:
+  #        - "example.com"
 
 valkey:
   enabled: false
