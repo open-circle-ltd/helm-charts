@@ -64,6 +64,20 @@ entries:
     version: 0.1.1
   retro-board:
   - apiVersion: v2
+    created: "2026-05-08T08:53:13.712525656Z"
+    dependencies:
+    - alias: retro-board
+      name: rails-app-with-database
+      repository: https://open-circle-ltd.github.io/helm-charts
+      version: 0.2.1
+    description: OpenCircle Retro Board - Rails app with database
+    digest: ead8bb8ee9359eef4b7cc6654922598894c73d974f9ceb5fb83137b6e8620651
+    name: retro-board
+    type: application
+    urls:
+    - https://github.com/open-circle-ltd/helm-charts/releases/download/retro-board-0.2.0/retro-board-0.2.0.tgz
+    version: 0.2.0
+  - apiVersion: v2
     created: "2026-05-08T08:04:04.034512211Z"
     dependencies:
     - alias: app
@@ -77,4 +91,4 @@ entries:
     urls:
     - https://github.com/open-circle-ltd/helm-charts/releases/download/retro-board-0.1.0/retro-board-0.1.0.tgz
     version: 0.1.0
-generated: "2026-05-08T08:04:04.034525626Z"
+generated: "2026-05-08T08:53:13.712542798Z"
