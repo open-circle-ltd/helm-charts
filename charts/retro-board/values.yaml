@@ -1,8 +1,7 @@
-# Values are passed through to the base chart under the "app" key (alias).
+# Values are passed through to the base chart under the "retro-board" key (alias).
 # See: charts/rails-app-with-database/values.yaml for all available options.
 
-app:
-  nameOverride: ""
+retro-board:
   fullnameOverride: ""
 
   web:

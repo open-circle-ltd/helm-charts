@@ -2,9 +2,9 @@ apiVersion: v2
 name: retro-board
 description: OpenCircle Retro Board - Rails app with database
 type: application
-version: 0.1.0
+version: 0.2.0
 dependencies:
   - name: rails-app-with-database
     version: 0.2.1
     repository: "https://open-circle-ltd.github.io/helm-charts"
-    alias: app
+    alias: retro-board
