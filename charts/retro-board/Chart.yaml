@@ -9,6 +9,6 @@ dependencies:
     repository: "https://open-circle-ltd.github.io/helm-charts"
     alias: retro-board
   - name: valkey
-    version: 0.9.4
+    version: 0.12.0
     repository: "https://valkey.io/valkey-helm/"
     condition: valkey.enabled
