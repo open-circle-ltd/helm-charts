@@ -2,7 +2,7 @@ apiVersion: v2
 name: meta-control
 description: OpenCircle Meta-Control - Rails app with database
 type: application
-version: 0.1.0
+version: 0.1.1
 dependencies:
   - name: rails-app-with-database
     version: 0.2.1
