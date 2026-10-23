@@ -64,6 +64,24 @@ entries:
     version: 0.1.1
   retro-board:
   - apiVersion: v2
+    created: "2026-10-23T11:50:07.263520141Z"
+    dependencies:
+    - alias: retro-board
+      name: rails-app-with-database
+      repository: https://open-circle-ltd.github.io/helm-charts
+      version: 0.2.1
+    - condition: valkey.enabled
+      name: valkey
+      repository: https://valkey.io/valkey-helm/
+      version: 0.12.0
+    description: OpenCircle Retro Board - Rails app with database
+    digest: bf03a00565dea077d4ce62ddb3882685dcde50c4c879cd8911cd31fffe6da6b6
+    name: retro-board
+    type: application
+    urls:
+    - https://github.com/open-circle-ltd/helm-charts/releases/download/retro-board-0.3.2/retro-board-0.3.2.tgz
+    version: 0.3.2
+  - apiVersion: v2
     created: "2026-05-08T12:31:32.71579056Z"
     dependencies:
     - alias: retro-board
@@ -127,4 +145,4 @@ entries:
     urls:
     - https://github.com/open-circle-ltd/helm-charts/releases/download/retro-board-0.1.0/retro-board-0.1.0.tgz
     version: 0.1.0
-generated: "2026-05-08T12:31:32.715812681Z"
+generated: "2026-10-23T11:50:07.263551746Z"
