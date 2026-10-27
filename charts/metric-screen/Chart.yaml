@@ -1,0 +1,10 @@
+apiVersion: v2
+name: metric-screen
+description: OpenCircle Metric Screen - Ruby app without database
+type: application
+version: 0.1.0
+dependencies:
+  - name: ruby-app-without-database
+    version: 0.1.0
+    repository: "https://open-circle-ltd.github.io/helm-charts"
+    alias: metric-screen
