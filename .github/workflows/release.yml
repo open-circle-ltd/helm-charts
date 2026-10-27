@@ -34,3 +34,50 @@ jobs:
         uses: helm/chart-releaser-action@v1.7.0
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+
+      - name: Update chart table on gh-pages
+        run: |
+          site="$RUNNER_TEMP/gh-pages"
+          git fetch origin gh-pages
+          git worktree add -B gh-pages "$site" origin/gh-pages
+
+          # One row per chart in the published index, using its latest version
+          rows=$(yq -r '.entries | to_entries | sort_by(.key) | .[] |
+            "| [" + .key + "](https://github.com/${{ github.repository }}/tree/main/charts/" + .key + ") | " +
+            .value[0].description + " | " + .value[0].version + " |"' "$site/index.yaml")
+
+          cat > "$site/index.md" <<EOF
+          ## Usage
+
+          \`\`\`bash
+          helm repo add open-circle https://open-circle-ltd.github.io/helm-charts
+          helm repo update
+          \`\`\`
+
+          ## Charts
+
+          | Chart | Description | Latest version |
+          |-------|-------------|----------------|
+          $rows
+
+          ### Install a chart
+
+          \`\`\`bash
+          helm install my-app open-circle/rails-app-with-database -f values.yaml
+          \`\`\`
+
+          ### Search for available charts
+
+          \`\`\`bash
+          helm search repo open-circle
+          \`\`\`
+          EOF
+
+          cd "$site"
+          if git diff --quiet -- index.md; then
+            echo "index.md is up to date"
+          else
+            git add index.md
+            git commit -m "Update chart table in index.md"
+            git push origin gh-pages
+          fi
