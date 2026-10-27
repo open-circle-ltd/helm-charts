@@ -2,7 +2,7 @@ apiVersion: v2
 name: metric-screen
 description: Metric-screen (based on ruby-app-without-database)
 type: application
-version: 0.1.1
+version: 0.1.2
 dependencies:
   - name: ruby-app-without-database
     version: 0.1.0
