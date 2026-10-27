@@ -11,6 +11,7 @@ helm repo update
 |-------|-------------|
 | rails-app-with-database | Generic Rails app with DB migrations |
 | rails-app-without-database | Generic Rails app without database |
+| ruby-app-without-database | Generic Ruby app without database |
 | retro-board | Retro Board (based on rails-app-with-database) |
 | meta-control | Meta-Control (based on rails-app-with-database) |
 
