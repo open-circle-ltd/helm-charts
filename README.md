@@ -11,6 +11,7 @@ Helm chart repository for OpenCircle, published via GitHub Pages.
 | [ruby-app-without-database](charts/ruby-app-without-database) | Generic Ruby app without database |
 | [retro-board](charts/retro-board) | Retro Board (based on rails-app-with-database) |
 | [meta-control](charts/meta-control) | Meta Control (based on rails-app-with-database) |
+| [metric-screen](charts/metric-screen) | Metric Screen (based on ruby-app-without-database) |
 
 ## Usage
 
