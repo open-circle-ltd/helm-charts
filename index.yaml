@@ -52,6 +52,16 @@ entries:
     version: 0.1.1
   rails-app-without-database:
   - apiVersion: v2
+    created: "2026-10-27T16:34:01.419969538Z"
+    description: A Helm chart for a generic Rails app without database
+    digest: 035969402f5c459ef12a07f055020044aa4670a9a922a1b26cb423687ad9435a
+    icon: https://raw.githubusercontent.com/rails/rails/master/guides/assets/images/favicon.ico
+    name: rails-app-without-database
+    type: application
+    urls:
+    - https://github.com/open-circle-ltd/helm-charts/releases/download/rails-app-without-database-0.2.2/rails-app-without-database-0.2.2.tgz
+    version: 0.2.2
+  - apiVersion: v2
     created: "2026-05-07T16:02:40.996320821Z"
     description: A Helm chart for a generic Rails app without database
     digest: 2b6bcff4b757a477864e1a281c8051720a99bcaf2cec0b586e66396a325d57fe
@@ -164,4 +174,15 @@ entries:
     urls:
     - https://github.com/open-circle-ltd/helm-charts/releases/download/retro-board-0.1.0/retro-board-0.1.0.tgz
     version: 0.1.0
-generated: "2026-10-23T12:47:01.118067724Z"
+  ruby-app-without-database:
+  - apiVersion: v2
+    created: "2026-10-27T16:34:01.735801063Z"
+    description: A Helm chart for a generic Ruby app without database
+    digest: 7c8004118b4e2c6c62eb7945153e9e4d4709fce5acd40985af3c154138c49fde
+    icon: https://raw.githubusercontent.com/rails/rails/master/guides/assets/images/favicon.ico
+    name: ruby-app-without-database
+    type: application
+    urls:
+    - https://github.com/open-circle-ltd/helm-charts/releases/download/ruby-app-without-database-0.1.0/ruby-app-without-database-0.1.0.tgz
+    version: 0.1.0
+generated: "2026-10-27T16:34:01.735821294Z"
