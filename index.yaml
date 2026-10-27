@@ -19,6 +19,21 @@ entries:
     urls:
     - https://github.com/open-circle-ltd/helm-charts/releases/download/meta-control-0.1.1/meta-control-0.1.1.tgz
     version: 0.1.1
+  metric-screen:
+  - apiVersion: v2
+    created: "2026-10-27T16:40:52.514104766Z"
+    dependencies:
+    - alias: metric-screen
+      name: ruby-app-without-database
+      repository: https://open-circle-ltd.github.io/helm-charts
+      version: 0.1.0
+    description: OpenCircle Metric Screen - Ruby app without database
+    digest: 88bb571f72b5ce4a719c6f585640d183da8ff8178d297b25e9e20d4e7a69089a
+    name: metric-screen
+    type: application
+    urls:
+    - https://github.com/open-circle-ltd/helm-charts/releases/download/metric-screen-0.1.0/metric-screen-0.1.0.tgz
+    version: 0.1.0
   rails-app-with-database:
   - apiVersion: v2
     created: "2026-05-07T16:02:40.809428291Z"
@@ -185,4 +200,4 @@ entries:
     urls:
     - https://github.com/open-circle-ltd/helm-charts/releases/download/ruby-app-without-database-0.1.0/ruby-app-without-database-0.1.0.tgz
     version: 0.1.0
-generated: "2026-10-27T16:34:01.735821294Z"
+generated: "2026-10-27T16:40:52.514126198Z"
