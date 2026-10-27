@@ -1,6 +1,6 @@
 apiVersion: v2
 name: metric-screen
-description: Meta-Control (based on ruby-app-without-database)
+description: Metric-screen (based on ruby-app-without-database)
 type: application
 version: 0.1.1
 dependencies:
