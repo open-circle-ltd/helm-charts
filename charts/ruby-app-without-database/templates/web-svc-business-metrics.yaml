@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Release.Name }}-business-metrics
+  labels:
+    app: {{ template "helm-app.name" . }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  type: {{ .Values.web.bizmetrics.service.type }}
+  ports:
+    - name: 'http-bizmetrics'
+      targetPort: {{ .Values.web.bizmetrics.service.internalPort }}
+      port: 9394
+  selector:
+    app: {{ template "helm-app.name" . }}
+    release: {{ .Release.Name }}

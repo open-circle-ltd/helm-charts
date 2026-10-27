@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ template "helm-app.fullname" . }}
+  labels:
+    app: {{ template "helm-app.name" . }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.web.replicasCount }}
+  selector:
+    matchLabels:
+      app: {{ template "helm-app.name" . }}
+      release: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app: {{ template "helm-app.name" . }}
+        release: {{ .Release.Name }}
+    spec:
+      imagePullSecrets:
+        - name: {{ .Values.web.image.pullSecret }}
+      # https://kubernetes.io/docs/concepts/services-networking/add-entries-to-pod-etc-hosts-with-host-aliases/
+      hostAliases:
+        - ip: "192.168.14.120"
+          hostnames: ["pwiapi.youngsolutions.ch"]
+      containers:
+      # SINATRA WEB APP
+      - name: {{ .Chart.Name }}
+        # https://stackoverflow.com/a/60054111
+        image: "{{ .Values.web.image.repository }}:{{ .Chart.AppVersion }}"
+        imagePullPolicy: {{ .Values.web.image.pullPolicy }}
+        envFrom:
+          - secretRef:
+              name: {{ template "helm-app.name" . }}
+
+#        ports:
+#        - containerPort: {{ .Values.web.service.internalPort }}
+#        volumeMounts:
+#        - name: app-workdir
+#          mountPath: "/myapp"
+#        command: ["/bin/sh"]
+#        args: ["-c", "cat tmp/pids/server.pid && rm -f tmp/pids/server.pid || true && bundle exec rails server -b 0.0.0.0 -p {{ .Values.web.service.internalPort }}"]
+#      volumes:
+#        - name: app-workdir
+#          persistentVolumeClaim:
+#            claimName: app-workdir-pvc

@@ -1,0 +1,43 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: {{ .Release.Name }}-metrics-ingress
+  labels:
+    app: {{ template "helm-app.name" . }}
+    chart: {{ .Chart.Name }}-{{ .Chart.Version | replace "+" "_" }}
+    release: {{ .Release.Name }}
+    heritage: {{ .Release.Service }}
+    # NEW LABEL STYLE
+    #  labels:
+    #    app.kubernetes.io/name: { { template "helm-app.name" . } }
+    #    helm.sh/chart: { { .Chart.Name } }-{{ .Chart.Version | replace "+" "_" }}
+    #    app.kubernetes.io/instance: { .Release.Name }}
+    #    app.kubernetes.io/managed-by: { .Release.Service }}
+  {{- with .Values.metric_ingress.annotations }}
+  annotations:
+    {{- toYaml . | nindent 4 }}
+  {{- end }}
+spec:
+{{- if .Values.metric_ingress.tls }}
+  tls:
+  {{- range .Values.metric_ingress.tls }}
+    - hosts:
+      {{- range .hosts }}
+        - {{ . | quote }}
+      {{- end }}
+      secretName: {{ .secretName }}
+  {{- end }}
+{{- end }}
+  rules:
+  {{- range .Values.metric_ingress.hosts }}
+    - host: {{ . | quote }}
+      http:
+        paths:
+        - pathType: Prefix
+          path: "/"
+          backend:
+            service:
+              name: {{ $.Release.Name }}-metrics
+              port:
+                number: 9393
+  {{- end }}

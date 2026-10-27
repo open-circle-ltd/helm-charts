@@ -1,0 +1,39 @@
+nameOverride: ""
+fullnameOverride: ""
+
+web:
+  replicasCount: 1
+  image:
+    # repository: SET-WHEN-USING
+    # tag: auto fall back to appVersion Value
+    pullPolicy: IfNotPresent
+    pullSecret: "set-to-pull-secret"
+  service:
+    type: ClusterIP
+    internalPort: 3030
+  metrics:
+    service:
+      type: ClusterIP
+      internalPort: 9393 # PUMA APP METRICS
+  bizmetrics:
+    service:
+      type: ClusterIP
+      internalPort: 9394 # CORE METRICS
+
+envConfig: {}
+
+ingress:
+  enabled: false
+  annotations: {}
+  hosts: []
+  tls: []
+#  Example:
+#  enabled: true
+#  annotations:
+#    cert-manager.io/cluster-issuer: "{{cluster_issuer_name | mandatory }}"
+#  hosts:
+#    - "{{ xxx }}"
+#  tls:
+#    - secretName: "{{xxx}}-tls-secret"
+#      hosts:
+#        - "{{ xxx }}"

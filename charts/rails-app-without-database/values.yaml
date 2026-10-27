@@ -5,7 +5,7 @@ web:
   replicasCount: 1
   image:
     # repository: SET-WHEN-USING
-    # tag: auto fall back to appVersion Value    
+    # tag: auto fall back to appVersion Value
     pullPolicy: IfNotPresent
     pullSecret: "set-to-pull-secret"
   service:
