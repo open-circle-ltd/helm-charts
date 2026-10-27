@@ -2,6 +2,24 @@ apiVersion: v1
 entries:
   meta-control:
   - apiVersion: v2
+    created: "2026-10-27T16:56:43.641973824Z"
+    dependencies:
+    - alias: meta-control
+      name: rails-app-with-database
+      repository: https://open-circle-ltd.github.io/helm-charts
+      version: 0.2.1
+    - condition: valkey.enabled
+      name: valkey
+      repository: https://valkey.io/valkey-helm/
+      version: 0.12.0
+    description: Meta-Control (based on rails-app-with-database)
+    digest: 62bc4aa0dd0584cf75efe5574da69a741a5a462e3cd5c2babe16cf526ba0aa06
+    name: meta-control
+    type: application
+    urls:
+    - https://github.com/open-circle-ltd/helm-charts/releases/download/meta-control-0.1.3/meta-control-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
     created: "2026-10-23T12:47:01.118051189Z"
     dependencies:
     - alias: meta-control
@@ -20,6 +38,20 @@ entries:
     - https://github.com/open-circle-ltd/helm-charts/releases/download/meta-control-0.1.1/meta-control-0.1.1.tgz
     version: 0.1.1
   metric-screen:
+  - apiVersion: v2
+    created: "2026-10-27T16:56:43.940234278Z"
+    dependencies:
+    - alias: metric-screen
+      name: ruby-app-without-database
+      repository: https://open-circle-ltd.github.io/helm-charts
+      version: 0.1.0
+    description: Metric-screen (based on ruby-app-without-database)
+    digest: 491170d297d3a625e86468b28a1952961656b6b971af2507863206d5658bb438
+    name: metric-screen
+    type: application
+    urls:
+    - https://github.com/open-circle-ltd/helm-charts/releases/download/metric-screen-0.1.3/metric-screen-0.1.3.tgz
+    version: 0.1.3
   - apiVersion: v2
     created: "2026-10-27T16:40:52.514104766Z"
     dependencies:
@@ -107,6 +139,24 @@ entries:
     - https://github.com/open-circle-ltd/helm-charts/releases/download/rails-app-without-database-0.1.1/rails-app-without-database-0.1.1.tgz
     version: 0.1.1
   retro-board:
+  - apiVersion: v2
+    created: "2026-10-27T16:56:44.219319901Z"
+    dependencies:
+    - alias: retro-board
+      name: rails-app-with-database
+      repository: https://open-circle-ltd.github.io/helm-charts
+      version: 0.2.1
+    - condition: valkey.enabled
+      name: valkey
+      repository: https://valkey.io/valkey-helm/
+      version: 0.12.0
+    description: Retro Board (based on rails-app-with-database)
+    digest: 281f3053e8c6686091e2ef048a52794fa4082599566133d8203618ec2f8c7ef5
+    name: retro-board
+    type: application
+    urls:
+    - https://github.com/open-circle-ltd/helm-charts/releases/download/retro-board-0.3.3/retro-board-0.3.3.tgz
+    version: 0.3.3
   - apiVersion: v2
     created: "2026-10-23T11:50:07.263520141Z"
     dependencies:
@@ -200,4 +250,4 @@ entries:
     urls:
     - https://github.com/open-circle-ltd/helm-charts/releases/download/ruby-app-without-database-0.1.0/ruby-app-without-database-0.1.0.tgz
     version: 0.1.0
-generated: "2026-10-27T16:40:52.514126198Z"
+generated: "2026-10-27T16:56:44.219358083Z"
