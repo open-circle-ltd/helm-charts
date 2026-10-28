@@ -5,6 +5,6 @@ type: application
 version: 0.1.5
 dependencies:
   - name: ruby-app-without-database
-    version: 0.1.1
+    version: 0.1.0
     repository: "https://open-circle-ltd.github.io/helm-charts"
     alias: metric-screen
