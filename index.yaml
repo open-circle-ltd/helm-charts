@@ -94,6 +94,25 @@ entries:
     urls:
     - https://github.com/open-circle-ltd/helm-charts/releases/download/metric-screen-0.1.0/metric-screen-0.1.0.tgz
     version: 0.1.0
+  ops-planner:
+  - apiVersion: v2
+    created: "2026-10-28T10:58:25.727380524Z"
+    dependencies:
+    - alias: ops-planner
+      name: rails-app-with-database
+      repository: https://open-circle-ltd.github.io/helm-charts
+      version: 0.2.1
+    - condition: valkey.enabled
+      name: valkey
+      repository: https://valkey.io/valkey-helm/
+      version: 0.12.0
+    description: Ops-Planner (based on rails-app-with-database)
+    digest: b62a6afe3ff58d733676363e889d0185750b2abb50e73474bd75e4893d09f89d
+    name: ops-planner
+    type: application
+    urls:
+    - https://github.com/open-circle-ltd/helm-charts/releases/download/ops-planner-0.1.0/ops-planner-0.1.0.tgz
+    version: 0.1.0
   rails-app-with-database:
   - apiVersion: v2
     created: "2026-05-07T16:02:40.809428291Z"
@@ -288,4 +307,4 @@ entries:
     urls:
     - https://github.com/open-circle-ltd/helm-charts/releases/download/ruby-app-without-database-0.1.0/ruby-app-without-database-0.1.0.tgz
     version: 0.1.0
-generated: "2026-10-28T09:12:08.026365245Z"
+generated: "2026-10-28T10:58:25.727423173Z"
