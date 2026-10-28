@@ -39,6 +39,20 @@ entries:
     version: 0.1.1
   metric-screen:
   - apiVersion: v2
+    created: "2026-10-28T09:12:08.026339005Z"
+    dependencies:
+    - alias: metric-screen
+      name: ruby-app-without-database
+      repository: https://open-circle-ltd.github.io/helm-charts
+      version: 0.1.1
+    description: Metric-screen (based on ruby-app-without-database)
+    digest: 1133f1ae0df460224eeb54b61fbfcdee97760c0ecde0466bdbb3453ca745909a
+    name: metric-screen
+    type: application
+    urls:
+    - https://github.com/open-circle-ltd/helm-charts/releases/download/metric-screen-0.1.6/metric-screen-0.1.6.tgz
+    version: 0.1.6
+  - apiVersion: v2
     created: "2026-10-28T09:10:26.181590918Z"
     dependencies:
     - alias: metric-screen
@@ -274,4 +288,4 @@ entries:
     urls:
     - https://github.com/open-circle-ltd/helm-charts/releases/download/ruby-app-without-database-0.1.0/ruby-app-without-database-0.1.0.tgz
     version: 0.1.0
-generated: "2026-10-28T09:10:26.400726162Z"
+generated: "2026-10-28T09:12:08.026365245Z"
