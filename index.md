@@ -11,6 +11,7 @@ helm repo update
 |-------|-------------|----------------|
 | [meta-control](https://github.com/open-circle-ltd/helm-charts/tree/main/charts/meta-control) | Meta-Control (based on rails-app-with-database) | 0.1.3 |
 | [metric-screen](https://github.com/open-circle-ltd/helm-charts/tree/main/charts/metric-screen) | Metric-screen (based on ruby-app-without-database) | 0.1.6 |
+| [ops-planner](https://github.com/open-circle-ltd/helm-charts/tree/main/charts/ops-planner) | Ops-Planner (based on rails-app-with-database) | 0.1.0 |
 | [rails-app-with-database](https://github.com/open-circle-ltd/helm-charts/tree/main/charts/rails-app-with-database) | A Helm chart for a generic Rails app with DB migrations | 0.2.1 |
 | [rails-app-without-database](https://github.com/open-circle-ltd/helm-charts/tree/main/charts/rails-app-without-database) | A Helm chart for a generic Rails app without database | 0.2.2 |
 | [retro-board](https://github.com/open-circle-ltd/helm-charts/tree/main/charts/retro-board) | Retro Board (based on rails-app-with-database) | 0.3.3 |
