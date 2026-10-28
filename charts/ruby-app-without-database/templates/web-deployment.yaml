@@ -29,7 +29,7 @@ spec:
       # SINATRA WEB APP
       - name: {{ .Chart.Name }}
         # https://stackoverflow.com/a/60054111
-        image: "{{ .Values.web.image.repository }}:{{ .Chart.AppVersion }}"
+        image: "{{ .Values.web.image.repository }}:{{ template "helm-app.tag" . }}"
         imagePullPolicy: {{ .Values.web.image.pullPolicy }}
         envFrom:
           - secretRef:
