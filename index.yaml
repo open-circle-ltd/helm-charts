@@ -39,6 +39,20 @@ entries:
     version: 0.1.1
   metric-screen:
   - apiVersion: v2
+    created: "2026-10-28T09:10:26.181590918Z"
+    dependencies:
+    - alias: metric-screen
+      name: ruby-app-without-database
+      repository: https://open-circle-ltd.github.io/helm-charts
+      version: 0.1.0
+    description: Metric-screen (based on ruby-app-without-database)
+    digest: bc992acf2644a0ee19bd1c8524ebf517f2e73abb16cf6480535174d380f75021
+    name: metric-screen
+    type: application
+    urls:
+    - https://github.com/open-circle-ltd/helm-charts/releases/download/metric-screen-0.1.5/metric-screen-0.1.5.tgz
+    version: 0.1.5
+  - apiVersion: v2
     created: "2026-10-27T16:56:43.940234278Z"
     dependencies:
     - alias: metric-screen
@@ -241,6 +255,16 @@ entries:
     version: 0.1.0
   ruby-app-without-database:
   - apiVersion: v2
+    created: "2026-10-28T09:10:26.400670277Z"
+    description: A Helm chart for a generic Ruby app without database
+    digest: 19badab0192aebcb7f8becdae38810e8848fe1ed2951765f9e5b3523daeb5446
+    icon: https://raw.githubusercontent.com/rails/rails/master/guides/assets/images/favicon.ico
+    name: ruby-app-without-database
+    type: application
+    urls:
+    - https://github.com/open-circle-ltd/helm-charts/releases/download/ruby-app-without-database-0.1.1/ruby-app-without-database-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
     created: "2026-10-27T16:34:01.735801063Z"
     description: A Helm chart for a generic Ruby app without database
     digest: 7c8004118b4e2c6c62eb7945153e9e4d4709fce5acd40985af3c154138c49fde
@@ -250,4 +274,4 @@ entries:
     urls:
     - https://github.com/open-circle-ltd/helm-charts/releases/download/ruby-app-without-database-0.1.0/ruby-app-without-database-0.1.0.tgz
     version: 0.1.0
-generated: "2026-10-27T16:56:44.219358083Z"
+generated: "2026-10-28T09:10:26.400726162Z"
