@@ -9,6 +9,7 @@ helm repo update
 
 | Chart | Description | Latest version |
 |-------|-------------|----------------|
+| [mattermost-pi](https://github.com/open-circle-ltd/helm-charts/tree/main/charts/mattermost-pi) | Mattermost PI (based on rails-app-with-database) | 0.1.0 |
 | [meta-control](https://github.com/open-circle-ltd/helm-charts/tree/main/charts/meta-control) | Meta-Control (based on rails-app-with-database) | 0.1.3 |
 | [metric-screen](https://github.com/open-circle-ltd/helm-charts/tree/main/charts/metric-screen) | Metric-screen (based on ruby-app-without-database) | 0.1.6 |
 | [ops-planner](https://github.com/open-circle-ltd/helm-charts/tree/main/charts/ops-planner) | Ops-Planner (based on rails-app-with-database) | 0.1.0 |
