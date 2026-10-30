@@ -2,8 +2,5 @@ dependencies:
 - name: rails-app-with-database
   repository: https://open-circle-ltd.github.io/helm-charts
   version: 0.2.1
-- name: valkey
-  repository: https://valkey.io/valkey-helm/
-  version: 0.12.0
-digest: sha256:4fd22d00b49850a57b415e4181e32623b457433f7b215d558538b902dc0c4521
-generated: "2026-10-30T12:23:12.898019+01:00"
+digest: sha256:b7d49035c433453fcc35ee08ca8aa1e88f99ba19384afffe7573338b4102add9
+generated: "2026-10-30T13:53:33.979356+01:00"
