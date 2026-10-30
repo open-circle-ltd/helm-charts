@@ -2,6 +2,20 @@ apiVersion: v1
 entries:
   mattermost-pi:
   - apiVersion: v2
+    created: "2026-10-30T12:54:47.395231801Z"
+    dependencies:
+    - alias: mattermost-pi
+      name: rails-app-with-database
+      repository: https://open-circle-ltd.github.io/helm-charts
+      version: 0.2.1
+    description: Mattermost PI (based on rails-app-with-database)
+    digest: d2ef92c2261a228655743bdbb1c2f7dd3fd155f47e6e1bf1aafb13044e51077b
+    name: mattermost-pi
+    type: application
+    urls:
+    - https://github.com/open-circle-ltd/helm-charts/releases/download/mattermost-pi-0.1.1/mattermost-pi-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
     created: "2026-10-30T11:23:58.495765737Z"
     dependencies:
     - alias: mattermost-pi
@@ -326,4 +340,4 @@ entries:
     urls:
     - https://github.com/open-circle-ltd/helm-charts/releases/download/ruby-app-without-database-0.1.0/ruby-app-without-database-0.1.0.tgz
     version: 0.1.0
-generated: "2026-10-30T11:23:58.495808728Z"
+generated: "2026-10-30T12:54:47.395271231Z"
