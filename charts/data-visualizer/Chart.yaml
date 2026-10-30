@@ -2,7 +2,7 @@ apiVersion: v2
 name: data-visualizer
 description: Data-Visualizer (based on rails-app-without-database)
 type: application
-version: 0.1.1
+version: 0.1.2
 dependencies:
   - name: rails-app-without-database
     version: 0.2.2
