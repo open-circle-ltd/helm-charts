@@ -1,5 +1,20 @@
 apiVersion: v1
 entries:
+  data-visualizer:
+  - apiVersion: v2
+    created: "2026-10-30T13:52:21.746778765Z"
+    dependencies:
+    - alias: meta-control
+      name: rails-app-without-database
+      repository: https://open-circle-ltd.github.io/helm-charts
+      version: 0.2.2
+    description: Data-Visualizer (based on rails-app-without-database)
+    digest: 9acc02197346a5e3c69ff2f6c2c28281dbd34d2bd3c75975fe461f008efec18c
+    name: data-visualizer
+    type: application
+    urls:
+    - https://github.com/open-circle-ltd/helm-charts/releases/download/data-visualizer-0.1.0/data-visualizer-0.1.0.tgz
+    version: 0.1.0
   mattermost-pi:
   - apiVersion: v2
     created: "2026-10-30T12:54:47.395231801Z"
@@ -340,4 +355,4 @@ entries:
     urls:
     - https://github.com/open-circle-ltd/helm-charts/releases/download/ruby-app-without-database-0.1.0/ruby-app-without-database-0.1.0.tgz
     version: 0.1.0
-generated: "2026-10-30T12:54:47.395271231Z"
+generated: "2026-10-30T13:52:21.746822657Z"
