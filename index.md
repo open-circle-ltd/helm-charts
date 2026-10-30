@@ -9,7 +9,7 @@ helm repo update
 
 | Chart | Description | Latest version |
 |-------|-------------|----------------|
-| [data-visualizer](https://github.com/open-circle-ltd/helm-charts/tree/main/charts/data-visualizer) | Data-Visualizer (based on rails-app-without-database) | 0.1.0 |
+| [data-visualizer](https://github.com/open-circle-ltd/helm-charts/tree/main/charts/data-visualizer) | Data-Visualizer (based on rails-app-without-database) | 0.1.2 |
 | [mattermost-pi](https://github.com/open-circle-ltd/helm-charts/tree/main/charts/mattermost-pi) | Mattermost PI (based on rails-app-with-database) | 0.1.1 |
 | [meta-control](https://github.com/open-circle-ltd/helm-charts/tree/main/charts/meta-control) | Meta-Control (based on rails-app-with-database) | 0.1.3 |
 | [metric-screen](https://github.com/open-circle-ltd/helm-charts/tree/main/charts/metric-screen) | Metric-screen (based on ruby-app-without-database) | 0.1.6 |
