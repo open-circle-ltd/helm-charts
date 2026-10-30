@@ -1,5 +1,24 @@
 apiVersion: v1
 entries:
+  mattermost-pi:
+  - apiVersion: v2
+    created: "2026-10-30T11:23:58.495765737Z"
+    dependencies:
+    - alias: mattermost-pi
+      name: rails-app-with-database
+      repository: https://open-circle-ltd.github.io/helm-charts
+      version: 0.2.1
+    - condition: valkey.enabled
+      name: valkey
+      repository: https://valkey.io/valkey-helm/
+      version: 0.12.0
+    description: Mattermost PI (based on rails-app-with-database)
+    digest: 282a479d6ba6820dde428b1483111343cebe6d472af7a3482695b7d1dba0f6cf
+    name: mattermost-pi
+    type: application
+    urls:
+    - https://github.com/open-circle-ltd/helm-charts/releases/download/mattermost-pi-0.1.0/mattermost-pi-0.1.0.tgz
+    version: 0.1.0
   meta-control:
   - apiVersion: v2
     created: "2026-10-27T16:56:43.641973824Z"
@@ -307,4 +326,4 @@ entries:
     urls:
     - https://github.com/open-circle-ltd/helm-charts/releases/download/ruby-app-without-database-0.1.0/ruby-app-without-database-0.1.0.tgz
     version: 0.1.0
-generated: "2026-10-28T10:58:25.727423173Z"
+generated: "2026-10-30T11:23:58.495808728Z"
