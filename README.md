@@ -14,6 +14,7 @@ Helm chart repository for OpenCircle, published via GitHub Pages.
 | [ops-planner](charts/ops-planner) | Ops-Planner (based on rails-app-with-database) |
 | [metric-screen](charts/metric-screen) | Metric Screen (based on ruby-app-without-database) |
 | [mattermost-pi](charts/mattermost-pi) | Mattermost PI (based on rails-app-with-database) |
+| [data-visualizer](charts/data-visualizer) | Data Visualizer (based on rails-app-without-database) |
 
 ## Usage
 
