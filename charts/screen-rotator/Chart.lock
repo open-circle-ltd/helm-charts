@@ -1,0 +1,6 @@
+dependencies:
+- name: rails-app-with-database
+  repository: https://open-circle-ltd.github.io/helm-charts
+  version: 0.2.1
+digest: sha256:52d76b33ca48bc4ed8f7414c7e9acd714b40c63df6163bdd5b7c85d6b2794e9a
+generated: "2026-11-02T10:07:06.610735+01:00"
