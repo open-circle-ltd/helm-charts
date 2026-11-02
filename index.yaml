@@ -371,6 +371,20 @@ entries:
     version: 0.1.0
   screen-rotator:
   - apiVersion: v2
+    created: "2026-11-02T09:08:08.267121551Z"
+    dependencies:
+    - alias: screen-rotator
+      name: rails-app-with-database
+      repository: https://open-circle-ltd.github.io/helm-charts
+      version: 0.2.1
+    description: Screen Rotator (based on rails-app-with-database)
+    digest: c2512ad282f0d6ccd6beb6c3d4fe5c170fa4ea1893802720b90c921e02402c16
+    name: screen-rotator
+    type: application
+    urls:
+    - https://github.com/open-circle-ltd/helm-charts/releases/download/screen-rotator-0.1.1/screen-rotator-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
     created: "2026-11-02T08:54:00.179964248Z"
     dependencies:
     - alias: screen-rotator
@@ -388,4 +402,4 @@ entries:
     urls:
     - https://github.com/open-circle-ltd/helm-charts/releases/download/screen-rotator-0.1.0/screen-rotator-0.1.0.tgz
     version: 0.1.0
-generated: "2026-11-02T08:54:00.180009372Z"
+generated: "2026-11-02T09:08:08.26714082Z"
