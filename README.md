@@ -16,6 +16,7 @@ Helm chart repository for OpenCircle, published via GitHub Pages.
 | [mattermost-pi](charts/mattermost-pi) | Mattermost PI (based on rails-app-with-database) |
 | [data-visualizer](charts/data-visualizer) | Data Visualizer (based on rails-app-without-database) |
 | [screen-rotator](charts/screen-rotator) | Screen Rotator (based on rails-app-with-database) |
+| [chocowall](charts/chocowall) | Chocowall (based on rails-app-with-database) |
 
 ## Usage
 
