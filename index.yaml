@@ -1,5 +1,20 @@
 apiVersion: v1
 entries:
+  chocowall:
+  - apiVersion: v2
+    created: "2026-11-05T08:55:18.952997868Z"
+    dependencies:
+    - alias: chocowall
+      name: rails-app-with-database
+      repository: https://open-circle-ltd.github.io/helm-charts
+      version: 0.2.1
+    description: Chocowall (based on rails-app-with-database)
+    digest: 2a9211b167ef65c2f7e1082b039d81a253ef8810a2d7edb0c513a5a2570d7923
+    name: chocowall
+    type: application
+    urls:
+    - https://github.com/open-circle-ltd/helm-charts/releases/download/chocowall-0.1.0/chocowall-0.1.0.tgz
+    version: 0.1.0
   data-visualizer:
   - apiVersion: v2
     created: "2026-10-30T14:51:40.658906517Z"
@@ -402,4 +417,4 @@ entries:
     urls:
     - https://github.com/open-circle-ltd/helm-charts/releases/download/screen-rotator-0.1.0/screen-rotator-0.1.0.tgz
     version: 0.1.0
-generated: "2026-11-02T09:08:08.26714082Z"
+generated: "2026-11-05T08:55:18.953043463Z"
