@@ -22,9 +22,10 @@ spec:
       imagePullSecrets:
         - name: {{ .Values.web.image.pullSecret }}
       # https://kubernetes.io/docs/concepts/services-networking/add-entries-to-pod-etc-hosts-with-host-aliases/
+      {{- with .Values.web.hostAliases }}
       hostAliases:
-        - ip: "192.168.14.120"
-          hostnames: ["pwiapi.youngsolutions.ch"]
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
       containers:
       # SINATRA WEB APP
       - name: {{ .Chart.Name }}
@@ -33,7 +34,7 @@ spec:
         imagePullPolicy: {{ .Values.web.image.pullPolicy }}
         envFrom:
           - secretRef:
-              name: {{ template "helm-app.name" . }}
+              name: {{ template "helm-app.fullname" . }}
 
 #        ports:
 #        - containerPort: {{ .Values.web.service.internalPort }}

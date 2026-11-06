@@ -8,6 +8,11 @@ web:
     # tag: auto fall back to appVersion Value
     pullPolicy: IfNotPresent
     pullSecret: "set-to-pull-secret"
+  # https://kubernetes.io/docs/concepts/services-networking/add-entries-to-pod-etc-hosts-with-host-aliases/
+  # Set to [] to disable.
+  hostAliases:
+    - ip: "192.168.14.120"
+      hostnames: ["pwiapi.youngsolutions.ch"]
   service:
     type: ClusterIP
     internalPort: 3030
@@ -37,3 +42,9 @@ ingress:
 #    - secretName: "{{xxx}}-tls-secret"
 #      hosts:
 #        - "{{ xxx }}"
+
+metric_ingress:
+  enabled: false
+  annotations: {}
+  hosts: []
+  tls: []
