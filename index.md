@@ -20,7 +20,7 @@ helm repo update
 | [rails-app-with-database](https://github.com/open-circle-ltd/helm-charts/tree/main/charts/rails-app-with-database) | A Helm chart for a generic Rails app with DB migrations | 0.2.1 |
 | [rails-app-without-database](https://github.com/open-circle-ltd/helm-charts/tree/main/charts/rails-app-without-database) | A Helm chart for a generic Rails app without database | 0.2.2 |
 | [retro-board](https://github.com/open-circle-ltd/helm-charts/tree/main/charts/retro-board) | Retro Board (based on rails-app-with-database) | 0.3.3 |
-| [ruby-app-without-database](https://github.com/open-circle-ltd/helm-charts/tree/main/charts/ruby-app-without-database) | A Helm chart for a generic Ruby app without database | 0.1.1 |
+| [ruby-app-without-database](https://github.com/open-circle-ltd/helm-charts/tree/main/charts/ruby-app-without-database) | A Helm chart for a generic Ruby app without database | 0.1.2 |
 | [screen-rotator](https://github.com/open-circle-ltd/helm-charts/tree/main/charts/screen-rotator) | Screen Rotator (based on rails-app-with-database) | 0.1.1 |
 
 ### Install a chart
