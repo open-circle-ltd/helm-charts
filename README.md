@@ -17,6 +17,7 @@ Helm chart repository for OpenCircle, published via GitHub Pages.
 | [data-visualizer](charts/data-visualizer) | Data Visualizer (based on rails-app-without-database) |
 | [screen-rotator](charts/screen-rotator) | Screen Rotator (based on rails-app-with-database) |
 | [chocowall](charts/chocowall) | Chocowall (based on rails-app-with-database) |
+| [artefact-docs](charts/artefact-docs) | Artefact-Docs (based on rails-app-without-database) |
 
 ## Usage
 
