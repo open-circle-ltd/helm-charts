@@ -9,6 +9,7 @@ helm repo update
 
 | Chart | Description | Latest version |
 |-------|-------------|----------------|
+| [artefact-docs](https://github.com/open-circle-ltd/helm-charts/tree/main/charts/artefact-docs) | Artefact-Docs (based on rails-app-without-database) | 0.1.0 |
 | [chocowall](https://github.com/open-circle-ltd/helm-charts/tree/main/charts/chocowall) | Chocowall (based on rails-app-with-database) | 0.1.0 |
 | [data-visualizer](https://github.com/open-circle-ltd/helm-charts/tree/main/charts/data-visualizer) | Data-Visualizer (based on rails-app-without-database) | 0.1.2 |
 | [mattermost-pi](https://github.com/open-circle-ltd/helm-charts/tree/main/charts/mattermost-pi) | Mattermost PI (based on rails-app-with-database) | 0.1.1 |
