@@ -395,6 +395,16 @@ entries:
     version: 0.1.0
   ruby-app-without-database:
   - apiVersion: v2
+    created: "2026-11-06T13:18:06.09308898Z"
+    description: A Helm chart for a generic Ruby app without database
+    digest: 2d48f353f8dfc66c364605bf81dcc75726a742c418a0a64476844040df1d663c
+    icon: https://raw.githubusercontent.com/rails/rails/master/guides/assets/images/favicon.ico
+    name: ruby-app-without-database
+    type: application
+    urls:
+    - https://github.com/open-circle-ltd/helm-charts/releases/download/ruby-app-without-database-0.1.2/ruby-app-without-database-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v2
     created: "2026-10-28T09:10:26.400670277Z"
     description: A Helm chart for a generic Ruby app without database
     digest: 19badab0192aebcb7f8becdae38810e8848fe1ed2951765f9e5b3523daeb5446
@@ -447,4 +457,4 @@ entries:
     urls:
     - https://github.com/open-circle-ltd/helm-charts/releases/download/screen-rotator-0.1.0/screen-rotator-0.1.0.tgz
     version: 0.1.0
-generated: "2026-11-06T13:07:30.347733408Z"
+generated: "2026-11-06T13:18:06.093119736Z"
