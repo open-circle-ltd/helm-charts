@@ -11,6 +11,7 @@ helm repo update
 |-------|-------------|----------------|
 | [artefact-docs](https://github.com/open-circle-ltd/helm-charts/tree/main/charts/artefact-docs) | Artefact-Docs (based on rails-app-without-database) | 0.1.0 |
 | [chocowall](https://github.com/open-circle-ltd/helm-charts/tree/main/charts/chocowall) | Chocowall (based on rails-app-with-database) | 0.1.0 |
+| [cloudscale-exporter](https://github.com/open-circle-ltd/helm-charts/tree/main/charts/cloudscale-exporter) | Cloudscale-Exporter (based on ruby-app-without-database) | 0.1.0 |
 | [data-visualizer](https://github.com/open-circle-ltd/helm-charts/tree/main/charts/data-visualizer) | Data-Visualizer (based on rails-app-without-database) | 0.1.2 |
 | [mattermost-pi](https://github.com/open-circle-ltd/helm-charts/tree/main/charts/mattermost-pi) | Mattermost PI (based on rails-app-with-database) | 0.1.1 |
 | [meta-control](https://github.com/open-circle-ltd/helm-charts/tree/main/charts/meta-control) | Meta-Control (based on rails-app-with-database) | 0.1.3 |
