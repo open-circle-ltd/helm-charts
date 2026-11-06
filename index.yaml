@@ -32,6 +32,20 @@ entries:
     version: 0.1.0
   cloudscale-exporter:
   - apiVersion: v2
+    created: "2026-11-06T13:22:28.057584985Z"
+    dependencies:
+    - alias: cloudscale-exporter
+      name: ruby-app-without-database
+      repository: https://open-circle-ltd.github.io/helm-charts
+      version: 0.1.2
+    description: Cloudscale-Exporter (based on ruby-app-without-database)
+    digest: cb179493e3538af195b2e149c7aa37e8b66a4da1ebfad21a55c428a9fe53edcb
+    name: cloudscale-exporter
+    type: application
+    urls:
+    - https://github.com/open-circle-ltd/helm-charts/releases/download/cloudscale-exporter-0.1.1/cloudscale-exporter-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
     created: "2026-11-06T13:07:30.347600015Z"
     dependencies:
     - alias: cloudscale-exporter
@@ -457,4 +471,4 @@ entries:
     urls:
     - https://github.com/open-circle-ltd/helm-charts/releases/download/screen-rotator-0.1.0/screen-rotator-0.1.0.tgz
     version: 0.1.0
-generated: "2026-11-06T13:18:06.093119736Z"
+generated: "2026-11-06T13:22:28.057645928Z"
