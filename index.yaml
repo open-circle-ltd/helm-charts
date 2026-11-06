@@ -30,6 +30,21 @@ entries:
     urls:
     - https://github.com/open-circle-ltd/helm-charts/releases/download/chocowall-0.1.0/chocowall-0.1.0.tgz
     version: 0.1.0
+  cloudscale-exporter:
+  - apiVersion: v2
+    created: "2026-11-06T13:07:30.347600015Z"
+    dependencies:
+    - alias: cloudscale-exporter
+      name: ruby-app-without-database
+      repository: https://open-circle-ltd.github.io/helm-charts
+      version: 0.1.1
+    description: Cloudscale-Exporter (based on ruby-app-without-database)
+    digest: fda6df38c646b817cf30fe940659598757f37acb78af465ac1ddc2ebdce83a5a
+    name: cloudscale-exporter
+    type: application
+    urls:
+    - https://github.com/open-circle-ltd/helm-charts/releases/download/cloudscale-exporter-0.1.0/cloudscale-exporter-0.1.0.tgz
+    version: 0.1.0
   data-visualizer:
   - apiVersion: v2
     created: "2026-10-30T14:51:40.658906517Z"
@@ -432,4 +447,4 @@ entries:
     urls:
     - https://github.com/open-circle-ltd/helm-charts/releases/download/screen-rotator-0.1.0/screen-rotator-0.1.0.tgz
     version: 0.1.0
-generated: "2026-11-06T09:07:34.754837303Z"
+generated: "2026-11-06T13:07:30.347733408Z"
