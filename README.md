@@ -18,6 +18,7 @@ Helm chart repository for OpenCircle, published via GitHub Pages.
 | [screen-rotator](charts/screen-rotator) | Screen Rotator (based on rails-app-with-database) |
 | [chocowall](charts/chocowall) | Chocowall (based on rails-app-with-database) |
 | [artefact-docs](charts/artefact-docs) | Artefact-Docs (based on rails-app-without-database) |
+| [cloudscale-exporter](charts/cloudscale-exporter) | Cloudscale-Exporter (based on ruby-app-without-database) |
 
 ## Usage
 
