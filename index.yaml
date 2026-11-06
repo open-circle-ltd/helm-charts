@@ -1,5 +1,20 @@
 apiVersion: v1
 entries:
+  artefact-docs:
+  - apiVersion: v2
+    created: "2026-11-06T09:07:34.754800359Z"
+    dependencies:
+    - alias: artefact-docs
+      name: rails-app-without-database
+      repository: https://open-circle-ltd.github.io/helm-charts
+      version: 0.2.2
+    description: Artefact-Docs (based on rails-app-without-database)
+    digest: dec08bbd226b921aa5a763cd485f47fc9fc8a84e52bbfd1ef57f32bf6adbace9
+    name: artefact-docs
+    type: application
+    urls:
+    - https://github.com/open-circle-ltd/helm-charts/releases/download/artefact-docs-0.1.0/artefact-docs-0.1.0.tgz
+    version: 0.1.0
   chocowall:
   - apiVersion: v2
     created: "2026-11-05T08:55:18.952997868Z"
@@ -417,4 +432,4 @@ entries:
     urls:
     - https://github.com/open-circle-ltd/helm-charts/releases/download/screen-rotator-0.1.0/screen-rotator-0.1.0.tgz
     version: 0.1.0
-generated: "2026-11-05T08:55:18.953043463Z"
+generated: "2026-11-06T09:07:34.754837303Z"
