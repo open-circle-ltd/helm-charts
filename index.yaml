@@ -90,6 +90,24 @@ entries:
     version: 0.1.0
   ksgg:
   - apiVersion: v2
+    created: "2026-11-09T10:39:31.137277475Z"
+    dependencies:
+    - alias: ksgg
+      name: rails-app-with-database
+      repository: https://open-circle-ltd.github.io/helm-charts
+      version: 0.2.1
+    - condition: valkey.enabled
+      name: valkey
+      repository: https://valkey.io/valkey-helm/
+      version: 0.12.0
+    description: KSGG (based on rails-app-with-database)
+    digest: 4398824a8d4bdee6854240d5acd7dcc2fe2e0d4e24a194f6c77f27d202c6b148
+    name: ksgg
+    type: application
+    urls:
+    - https://github.com/open-circle-ltd/helm-charts/releases/download/ksgg-0.1.1/ksgg-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
     created: "2026-11-09T09:44:53.038519631Z"
     dependencies:
     - alias: ksgg
@@ -486,4 +504,4 @@ entries:
     urls:
     - https://github.com/open-circle-ltd/helm-charts/releases/download/screen-rotator-0.1.0/screen-rotator-0.1.0.tgz
     version: 0.1.0
-generated: "2026-11-09T09:44:53.038563456Z"
+generated: "2026-11-09T10:39:31.137349419Z"
