@@ -88,6 +88,21 @@ entries:
     urls:
     - https://github.com/open-circle-ltd/helm-charts/releases/download/data-visualizer-0.1.0/data-visualizer-0.1.0.tgz
     version: 0.1.0
+  ksgg:
+  - apiVersion: v2
+    created: "2026-11-09T09:44:53.038519631Z"
+    dependencies:
+    - alias: ksgg
+      name: rails-app-with-database
+      repository: https://open-circle-ltd.github.io/helm-charts
+      version: 0.2.1
+    description: KSGG (based on rails-app-with-database)
+    digest: f9f30efb3d43850db592036ddf1a75f208c9a051224a60e172a41bbd05fccd92
+    name: ksgg
+    type: application
+    urls:
+    - https://github.com/open-circle-ltd/helm-charts/releases/download/ksgg-0.1.0/ksgg-0.1.0.tgz
+    version: 0.1.0
   mattermost-pi:
   - apiVersion: v2
     created: "2026-10-30T12:54:47.395231801Z"
@@ -471,4 +486,4 @@ entries:
     urls:
     - https://github.com/open-circle-ltd/helm-charts/releases/download/screen-rotator-0.1.0/screen-rotator-0.1.0.tgz
     version: 0.1.0
-generated: "2026-11-06T13:22:28.057645928Z"
+generated: "2026-11-09T09:44:53.038563456Z"
