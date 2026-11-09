@@ -19,6 +19,7 @@ Helm chart repository for OpenCircle, published via GitHub Pages.
 | [chocowall](charts/chocowall) | Chocowall (based on rails-app-with-database) |
 | [artefact-docs](charts/artefact-docs) | Artefact-Docs (based on rails-app-without-database) |
 | [cloudscale-exporter](charts/cloudscale-exporter) | Cloudscale-Exporter (based on ruby-app-without-database) |
+| [ksgg](charts/ksgg) | KSGG (based on rails-app-with-database) |
 
 ## Usage
 
